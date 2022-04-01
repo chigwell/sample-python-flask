@@ -6,9 +6,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return jsonify(
-        field="value"
-    )
+    data = {
+        "Modules" : 15,
+        "Subject" : "Data Structures and Algorithms",
+    }
+  
+        return jsonify(data)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
