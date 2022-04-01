@@ -10,8 +10,7 @@ def hello():
         "Modules" : 15,
         "Subject" : "Data Structures and Algorithms",
     }
-  
-        return jsonify(data)
+    return jsonify(data)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
