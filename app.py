@@ -6,13 +6,12 @@ app = Flask(__name__)
 
 @app.route('/', methods = ['GET'])
 def ReturnJSON():
-    if(request.method == 'GET'):
-        data = {
-            "Modules" : 15,
-            "Subject" : "Data Structures and Algorithms",
-        }
+    data = {
+        "Modules" : 15,
+        "Subject" : "Data Structures and Algorithms",
+    }
   
-        return jsonify(data)
+    return jsonify(data)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
